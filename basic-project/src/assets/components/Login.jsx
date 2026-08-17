@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({setlogin}) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
@@ -47,7 +47,9 @@ const Login = () => {
 
         <p className="text-center text-sm text-gray-600 mt-4">
           Don't have an account?{" "}
-          <a href="#" className="text-blue-500 hover:underline">
+          <a onClick={()=>{
+            setlogin(false)
+          }} href="#" className="text-blue-500 hover:underline">
             Register
           </a>
         </p>

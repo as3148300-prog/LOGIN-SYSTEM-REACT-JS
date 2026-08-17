@@ -3,10 +3,10 @@ import Login from './assets/components/Login'
 import Register from './assets/components/Register'
  
  const App = () => {
-  const  [login , setlogin ] = useState(true)
+  const  [login , setlogin ] = useState(false)
    return (
      <div>
-            {login  ? <Login  /> : <Register/>}
+            {login  ? <Login setlogin = {setlogin}  /> : <Register setlogin = {setlogin} />}
      </div>
    )
  }
